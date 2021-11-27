@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html lang="de" manifest="manifest.appcache">
+<head>
+    <title>Wordclock</title>
+    <meta charset="utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="apple-mobile-web-app-title" content="Bärneruhr"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="css/uhr.css"/>
+    <link rel="stylesheet" type="text/css" href="css/uhr-black.css" data-class="black" data-name="Schwarz"/>
+
+    <link rel="shortcut icon" type="image/png" href="resources/favicon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="resources/apple-touch-icon-precomposed.png"/>
+    <script type="text/javascript" src="js/libs.min.js"></script>
+    <script type="text/javascript" src="js/jquery.uhr.complete.min.js"></script>
+	
+    <script type="text/javascript">
+        function go(url) {
+            window.location = url;
+            return true;
+        }
+    </script>	
+</head>
+<body style="padding:0;margin:0;">
+<div id="uhr"></div>
+
+<script type="text/javascript">
+    (function($) {
+        var width = $(window).width();
+        var height = $(window).height();
+        var size = Math.min(width, height) + 'px';
+        $('#uhr').uhr({
+            width: size,
+			language: 'de',
+			controls: false,			
+        });
+    })(jQuery);
+</script>
+</body>
+</html>

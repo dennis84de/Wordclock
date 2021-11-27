@@ -1,0 +1,35 @@
+/*
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+body {
+    background-color: #000;
+}
+
+.uhr.black {
+    background-color: #111;
+}
+
+.black .onoffswitch-inner:before {
+    background-color: #111;
+}
+
+.uhr.black .dot:not(.active) {
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0.1em rgba(255, 255, 255, 0.1);
+}
+
+.uhr.black .letter:not(.active) {
+    color: rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 0.1em rgba(255, 255, 255, 0.1);
+}
